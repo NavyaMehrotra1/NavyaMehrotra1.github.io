@@ -1,20 +1,34 @@
-const body = document.body; 
-const toggleButton = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme');
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
 
-// Apply saved theme on load
-if (currentTheme === 'dark') {
-    body.classList.add('dark-mode');
-    body.setAttribute('data-theme', 'dark');
-} else {
-    body.setAttribute('data-theme', 'light');
+// Check for saved theme preference or default to light mode
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    body.classList.add('dark-theme');
+    themeToggle.classList.add('active');
 }
 
-toggleButton.addEventListener('click', () => {
-    const isDark = body.classList.contains('dark-mode');
-    const newTheme = isDark ? 'light' : 'dark';
-    
-    body.setAttribute('data-theme', newTheme);
-    body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', newTheme);
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    themeToggle.classList.toggle('active');
+
+    // Save theme preference
+    if (body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
 });

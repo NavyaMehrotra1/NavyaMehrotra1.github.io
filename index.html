@@ -6,55 +6,44 @@
     <title>Navya Mehrotra's Portfolio</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!-- Nav Bar -->
-    <nav>
-        <button id="theme-toggle">Toggle Theme</button>
-    </nav>
+    <div class="container">
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects & Research</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#link">Link</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <span>Theme</span>
+                    <div class="toggle-switch" id="themeToggle"></div>
+                </div>
+            </div>
+        </nav>
 
-    <main>
-        <div class="content">
-            <h1>Navya Mehrotra</h1>
-        </div>
-        
-        <!-- About Me -->
-        <section id="about">
-            <h2>About Me</h2>
-            <!-- Text (on left) -->
-            <!-- Image (on right) -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi. I'm Navya Mehrotra.</h1>
+                    <p class="subtitle">CS + Econ @ JHU. Interested in AI, design, and building things that matter.</p>
+                    <p class="description">I'm a CS + Econ student at Johns Hopkins.</p>
+                    <a href="#projects" class="cta-button">View My Work</a>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image">
+                        <img src = "assets/Navya - Professional Picture copy.jpeg"> 
+                    </div>
+                    
+                </div>
+            </div>
         </section>
+    </div>
 
-        <!-- Work experience -->
-        <section id="experience">
-            <h2>Work Experience</h2>
-        </section>
-
-        <!-- Projects and Research -->
-        <section id="projects">
-            <h2>Projects & Research</h2>
-        </section>
-
-        <!-- Awards -->
-        <section id="awards">
-            <h2>Awards</h2>
-        </section>
-
-        <!-- Teaching Experience -->
-        <section id="teaching">
-            <h2>Teaching Experience</h2>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills">
-            <h2>Skills</h2>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <!-- LinkedIn and Github -->
-        </section>
-    </main>
 </body>
 </html>
