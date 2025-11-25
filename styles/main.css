@@ -43,10 +43,17 @@
  }
 
  .nav-links {
-   display: flex;
-   list-style: none;
-   gap: 40px;
- }
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+/* Make list items align inline elements like badges nicely */
+.nav-links li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
  .nav-links a {
    text-decoration: none;
@@ -62,12 +69,27 @@
  }
 
  .dark-theme .nav-links a {
-   color: #f5f5f7;
- }
+  color: #f5f5f7;
+}
 
  .dark-theme .nav-links a:hover {
-   color: #2997ff;
- }
+  color: #2997ff;
+}
+
+/* CV updated badge in nav */
+.nav-badge {
+  font-size: 12px;
+  line-height: 1;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: #e5e5ea;
+  color: #1d1d1f;
+}
+
+.dark-theme .nav-badge {
+  background: #39393d;
+  color: #f5f5f7;
+}
 
  /* Theme Toggle */
  .theme-toggle {

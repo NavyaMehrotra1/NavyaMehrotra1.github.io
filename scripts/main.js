@@ -33,4 +33,46 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Update CV last updated date using the Last-Modified header, if possible
+window.addEventListener('DOMContentLoaded', async () => {
+    // Support both the nav badge and (optionally) a CV section badge
+    const navLink = document.getElementById('cvNavLink');
+    const navBadge = document.getElementById('cvNavUpdated');
+    const cvLink = document.getElementById('cvLink');
+    const cvUpdated = document.getElementById('cvUpdated');
 
+    // Determine CV URL from either the nav link or the CV section link
+    const sourceLinkEl = navLink || cvLink;
+    const cvUrl = sourceLinkEl ? sourceLinkEl.getAttribute('href') : null;
+    if (!cvUrl) return;
+
+    const applyFormattedDate = (formatted) => {
+        if (navBadge && formatted) navBadge.textContent = `Updated ${formatted}`;
+        if (cvUpdated && formatted) cvUpdated.textContent = formatted;
+    };
+
+    const applyFallback = () => {
+        const navFallback = navBadge ? navBadge.getAttribute('data-fallback-date') : null;
+        const sectionFallback = cvUpdated ? cvUpdated.getAttribute('data-fallback-date') : null;
+        if (navBadge && navFallback) navBadge.textContent = `Updated ${navFallback}`;
+        if (cvUpdated && sectionFallback) cvUpdated.textContent = sectionFallback;
+    };
+
+    try {
+        // Use a HEAD request to avoid downloading the whole file
+        const res = await fetch(cvUrl, { method: 'HEAD' });
+        const lastModified = res.headers.get('Last-Modified');
+        if (res.ok && lastModified) {
+            const date = new Date(lastModified);
+            // Format like "Sep 2025"
+            const formatted = date.toLocaleDateString(undefined, { year: 'numeric', month: 'short' });
+            if (formatted && formatted !== 'Invalid Date') {
+                applyFormattedDate(formatted);
+                return;
+            }
+        }
+        applyFallback();
+    } catch (e) {
+        applyFallback();
+    }
+});
