@@ -54,17 +54,36 @@
     </div>
 <section id="projects" class="section" style="margin-top: 80px;">
         <div class="container">
-            <h2 class="section-title">Featured Research & Projects</h2>
-            <p class="section-subtitle">A selection of my recent work in AI, web development, and data science</p>
-            
-            <div class="projects-grid">
+            <h2 class="section-title">Featured Projects & Research</h2>
+            <p class="section-subtitle">Highlights from my work in AI, research, and engineering</p>
+
+            <div class="projects-grid featured-grid">
+                <!-- CSSL Research -->
                 <div class="project-card">
-                    <div class="project-image"><img src = "assets/delineo_poster_sp25.png"></div>
+                    <div class="project-image"><img src="assets/pdi.png"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks Paper</h3>
+                        <p class="project-description">Paper with the Computational Social Sciences Lab at JHU: 
+Devising new sampling method to represent diverse perspectives for LLM training datasets. Under submission to ACL ARR and COLM. <br>
+                            <i>Advisor: Dr. Kristina Gligorić</i>
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Research</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LLMs</span>
+                        </div>
+                        <div class="project-links"></div>
+                    </div>
+                </div>
+
+                <!-- Delineo -->
+                <div class="project-card">
+                    <div class="project-image"><img src="assets/delineo_poster_sp25.png"></div>
                     <div class="project-content">
                         <h3 class="project-title">Delineo Disease Modelling Simulator</h3>
                         <p class="project-description">Working with WHO and Ruvos to make a disease modelling platform that can demonstrate the spread of diseases at a small town level with different interventions. Presented at JHU Design Day and DREAMS, won Dean's Design Award in Computer Science. <a href="https://apply.jhu.edu/hopkins-insider/different-ways-to-get-involved-in-research-at-hopkins/" target="_blank" class="project-link">Read more here.</a>
-                            <br> 
-                            <br>
+                            <br><br>
                             <i>Advisors: Dr. Anton Dahbura, Dr. Kimia Ghobadi</i>
                         </p>
                         <div class="project-tech">
@@ -73,21 +92,90 @@
                             <span class="tech-tag">Flask</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Delineo-Disease-Modeling/Simulation"  target="_blank" class="project-link">GitHub</a>
-                            <a href="https://delineo.me/" class="project-link"  target="_blank">Live Demo</a>
+                            <a href="https://github.com/Delineo-Disease-Modeling/Simulation" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://delineo.me/" class="project-link" target="_blank">Live Demo</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- HackOverflow -->
                 <div class="project-card">
+                    <div class="project-image"><img src = "assets/hackoverflow.png"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">HackOverflow</h3>
+                        <p class="project-description">Winning project at TreeHacks (Stanford's hackathon). Built a full-stack application under 36 hours. Stack overflow like platform for AI agents to ask each other questions and improve efficiency. Won Best Use of Multi Agent Systems by Fetch.ai ($1500) and Best Use of Runpod Flash ($3090).</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SWE / Hackathon</span>
+                            <span class="tech-tag">TreeHacks Winner</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://devpost.com/software/hackoverflow-stack-overflow-for-ai-agents-at-hackathons" target="_blank" class="project-link">Devpost</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Projects -->
+            <div class="all-projects-header">
+                <h2 class="section-title" style="margin-top: 80px;">All Projects</h2>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="research">Research</button>
+                    <button class="filter-btn" data-filter="hackathon">SWE / Hackathon</button>
+                    <button class="filter-btn" data-filter="company">Company Affiliated</button>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="allProjectsGrid">
+                <!-- CSSL Research -->
+                <div class="project-card">
+                    <div class="project-image"><img src="assets/pdi.png"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">NLP Research: Computational Social Sciences Lab</h3>
+                        <p class="project-description">Paper with the Computational Social Sciences Lab at JHU: 
+Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under submission to ACL ARR and COLM. <br>
+                            <i>Advisor: Dr. Kristina Gligorić</i>
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Research</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LLMs</span>
+                        </div>
+                        <div class="project-links"></div>
+                    </div>
+                </div>
+
+                <!-- Delineo -->
+                <div class="project-card" data-category="research">
+                    <div class="project-image"><img src="assets/delineo_poster_sp25.png"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Delineo Disease Modelling Simulator</h3>
+                        <p class="project-description">Working with WHO and Ruvos to make a disease modelling platform that can demonstrate the spread of diseases at a small town level with different interventions. Presented at JHU Design Day and DREAMS, won Dean's Design Award in Computer Science. <a href="https://apply.jhu.edu/hopkins-insider/different-ways-to-get-involved-in-research-at-hopkins/" target="_blank" class="project-link">Read more here.</a>
+                            <br><br>
+                            <i>Advisors: Dr. Anton Dahbura, Dr. Kimia Ghobadi</i>
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Research</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Delineo-Disease-Modeling/Simulation" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://delineo.me/" class="project-link" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Counterfactual -->
+                <div class="project-card" data-category="research">
                     <div class="project-image">📊</div>
                     <div class="project-content">
                         <h3 class="project-title">AI-Driven Disease Counterfactual Analysis</h3>
-                        <p class="project-description">Using unspervised learning models (clustering, double machine learning) to answer causal interference based questions using disease modeling (eg: how much does an intervention help?).
-                        <br> 
-                            <br>
+                        <p class="project-description">Using unsupervised learning models (clustering, double machine learning) to answer causal inference questions using disease modeling: e.g. how much does an intervention help?
+                            <br><br>
                             <i>Advisors: Dr. Anton Dahbura, Dr. Kimia Ghobadi</i>
-                    </p>
+                        </p>
                         <div class="project-tech">
                             <span class="tech-tag">Research</span>
                             <span class="tech-tag">Python</span>
@@ -96,18 +184,18 @@
                             <span class="tech-tag">Scikit-learn</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Delineo-Disease-Modeling/ai-counterfactual-analysis" target = "_blank" class="project-link">GitHub</a>
+                            <a href="https://github.com/Delineo-Disease-Modeling/ai-counterfactual-analysis" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <!-- Causal Inference -->
+                <div class="project-card" data-category="research">
                     <div class="project-image">🌍</div>
                     <div class="project-content">
                         <h3 class="project-title">Causal Inference in Empirical Studies</h3>
                         <p class="project-description">Received a $6000 award to work on analysing and categorizing causal inference in empirical economics studies. Analyzed hundreds of papers. Explored different mathematical techniques to infer causal relationships.
-                            <br> 
-                            <br> 
+                            <br><br>
                             <i>Advisor: Dr. Paul Ferraro (Bloomberg Distinguished Professor)</i>
                         </p>
                         <div class="project-tech">
@@ -116,19 +204,17 @@
                             <span class="tech-tag">Mathematical Modeling</span>
                             <span class="tech-tag">Empirical Studies</span>
                         </div>
-                        <div class="project-links">
-                            
-                        </div>
+                        <div class="project-links"></div>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <!-- BlueJay -->
+                <div class="project-card" data-category="research">
                     <div class="project-image">🗳️</div>
                     <div class="project-content">
                         <h3 class="project-title">Testing BlueJay</h3>
-                        <p class="project-description">Working with JHU Programming Languages lab, to develop and test a new sematically typed programming langueg: BlueJay. BlueJay is a novel language with a semantic type checker for bug finding.
-                            <br>
-                            <br> 
+                        <p class="project-description">Working with JHU Programming Languages lab to develop and test a new semantically typed programming language: BlueJay. BlueJay is a novel language with a semantic type checker for bug finding.
+                            <br><br>
                             <i>Advisors: Dr. Scott Smith, Brandon Stride (grad student)</i>
                         </p>
                         <div class="project-tech">
@@ -138,65 +224,126 @@
                             <span class="tech-tag">PL Development</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/NavyaMehrotra1/jaylang" target = "_blank" class="project-link">GitHub</a>
+                            <a href="https://github.com/NavyaMehrotra1/jaylang" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">🎨</div>
+                <!-- HackOverflow -->
+                <div class="project-card" data-category="hackathon">
+                    <div class="project-image">🏆</div>
                     <div class="project-content">
-                        <h3 class="project-title">Coming Soon: LLMs for Causal Inference</h3>
-                        <p class="project-description">Working to explore whether LLMs can do causal reasoning tasks about health and environmental scenarios.</p>
+                        <h3 class="project-title">HackOverflow</h3>
+                        <p class="project-description">Winning project at TreeHacks (Stanford's hackathon). Built a full-stack application under 24 hours.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">SWE / Hackathon</span>
+                            <span class="tech-tag">TreeHacks Winner</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
+                        <div class="project-links"></div>
                     </div>
                 </div>
 
-                 <div class="project-card">
-                    <div class="project-image"><img src = "assets/data_science_club_website.png"></div>
+                <!-- Microfi -->
+                <div class="project-card" data-category="hackathon">
+                    <div class="project-image">⛓️</div>
                     <div class="project-content">
-                        <h3 class="project-title">Data Science Club Website</h3>
-                        <p class="project-description">Launched the Data Science Club at JHU as Club President and made a website for it. Our mission is to give students the skills and opportunity to work on impactful data projects.</p>
+                        <h3 class="project-title">Microfi: Blockchain for Microfinance</h3>
+                        <p class="project-description">Built at Technica Hackathon. A blockchain-based platform to enable transparent and accessible microfinance loans for underserved communities.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Express.js</span>
-                            <span class="tech-tag">Just for fun</span>
+                            <span class="tech-tag">SWE / Hackathon</span>
+                            <span class="tech-tag">Blockchain</span>
+                            <span class="tech-tag">Solidity</span>
+                            <span class="tech-tag">Web3</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/NavyaMehrotra1/data-science-club-website" target = "_blank" class="project-link">GitHub</a>
-                        </div>
+                        <div class="project-links"></div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"><img src = "assets/DealFlow.png"></div>
+
+                <!-- AI Accountant -->
+                <div class="project-card" data-category="hackathon">
+                    <div class="project-image">🧾</div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Accountant</h3>
+                        <p class="project-description">Winner of the Claude Hackathon. An end-to-end accounting system powered by AI: automates bookkeeping, categorization, and financial reporting.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SWE / Hackathon</span>
+                            <span class="tech-tag">Claude API</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Hackathon Winner</span>
+                        </div>
+                        <div class="project-links"></div>
+                    </div>
+                </div>
+
+                <!-- Deal Flow -->
+                <div class="project-card" data-category="hackathon">
+                    <div class="project-image"><img src="assets/DealFlow.png"></div>
                     <div class="project-content">
                         <h3 class="project-title">Deal Flow (AI VC Tool)</h3>
                         <p class="project-description">Made at HackMIT with Sutharsika, Jane, and Sunny.
-                            <br>
-                            <br>
-                            AI agent pulls data about companies and makes a graph, then a prediction algorithm forecasts company performance.
+                            <br><br>
+                            AI agent pulls data about companies and builds a graph, then a prediction algorithm forecasts company performance.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Hackathon</span>
+                            <span class="tech-tag">SWE / Hackathon</span>
                             <span class="tech-tag">AI Agent</span>
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Data Processing</span>
-                            <span class="tech-tag">Visualization</span>
                         </div>
                         <div class="project-links">
                             <a href="https://v0-remix-of-graph-visualization-fr.vercel.app/" class="project-link">Link</a>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Data Science Club Website -->
+                <div class="project-card" data-category="hackathon">
+                    <div class="project-image"><img src="assets/data_science_club_website.png"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Science Club Website</h3>
+                        <p class="project-description">Launched the Data Science Club at JHU as Club President and built a website for it. Our mission is to give students the skills and opportunity to work on impactful data projects.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SWE / Hackathon</span>
+                            <span class="tech-tag">HTML/CSS/JS</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/NavyaMehrotra1/data-science-club-website" target="_blank" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goldman Sachs -->
+                <div class="project-card" data-category="company">
+                    <div class="project-image">📈</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Goldman Sachs Emerging Leader Series</h3>
+                        <p class="project-description">Selected for Goldman Sachs' Emerging Leader Series. Built a mutual funds analysis tool to help surface insights for investment decision-making.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Company Affiliated</span>
+                            <span class="tech-tag">Finance</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links"></div>
+                    </div>
+                </div>
+
+                <!-- Citadel Datathon -->
+                <div class="project-card" data-category="company">
+                    <div class="project-image">🔍</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Citadel Women's Datathon</h3>
+                        <p class="project-description">Data science project analyzing how LLM adoption has affected productivity and labor markets across different industries, using econometric methods to quantify the impact.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Company Affiliated</span>
+                            <span class="tech-tag">Data Science</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Econometrics</span>
+                            <span class="tech-tag">LLMs</span>
+                        </div>
+                        <div class="project-links"></div>
                     </div>
                 </div>
             </div>
