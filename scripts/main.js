@@ -56,7 +56,7 @@ if ('IntersectionObserver' in window && !reducedMotion) {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
 }
 
-// Subtle cursor-following spotlight on honor cards (understated — no tilt)
+// Subtle cursor-following spotlight on honor cards (understated, no tilt)
 if (!reducedMotion) {
     document.querySelectorAll('.honor-card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -107,7 +107,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     // ---- data ----
     const honors = {
-        'jane-street': { firm: 'Jane Street', program: 'INSIGHT', badge: 'Selective', desc: "Selected for Jane Street's INSIGHT — an immersive program for exceptional students exploring quantitative trading, research, and technology." },
+        'jane-street': { firm: 'Jane Street', program: 'INSIGHT', badge: 'Selective', desc: "Selected for Jane Street's INSIGHT, an immersive program for exceptional students exploring quantitative trading, research, and technology." },
         'goldman':     { firm: 'Goldman Sachs', program: 'Emerging Leaders Summit', badge: 'Runner-Up', desc: 'Recognized as Runner-Up among a competitive cohort of emerging leaders selected nationwide.' },
         'bridgewater': { firm: 'Bridgewater Associates', program: 'AI Immersion Hackathon', badge: 'Invitation Only', desc: "Invited to build applied AI alongside the world's largest hedge fund." },
         'citadel':     { firm: 'Citadel', program: 'Datathon', badge: 'Invitation Only', desc: "Invited to compete in Citadel's invitation-only data science competition." },
@@ -184,7 +184,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 'CS + Econ @ Johns Hopkins (minors: Applied Math & Statistics, Financial Economics).',
                 '',
                 'Right now I\'m:',
-                '  ▸ a <span class="t-blue">BDP Fellow</span> — research with Dr. Gillian Hadfield',
+                '  ▸ a <span class="t-blue">BDP Fellow</span> · research with Dr. Gillian Hadfield',
                 '  ▸ an <span class="t-blue">AI Engineering Intern</span> @ Carebrain <span class="t-dim">(Neo portfolio company)</span>',
                 '',
                 'I build research, projects, and startups with tech that can help people.',
@@ -206,7 +206,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             const k = resolve(arg);
             if (honors[k]) {
                 const h = honors[k];
-                return '<span class="t-white">' + esc(h.firm) + '</span> — <span class="t-blue">' + esc(h.program) + '</span>  <span class="t-accent">[' + esc(h.badge) + ']</span>\n' + esc(h.desc);
+                return '<span class="t-white">' + esc(h.firm) + '</span> · <span class="t-blue">' + esc(h.program) + '</span>  <span class="t-accent">[' + esc(h.badge) + ']</span>\n' + esc(h.desc);
             }
             if (projects[k]) {
                 const p = projects[k];
@@ -241,7 +241,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 '  ★ Dean\'s Design Award (Computer Science)\n' +
                 '  ★ Women\'s Leadership Scholarship\n' +
                 '  ★ Summer BDP Research Award ($6000)\n' +
-                '  ★ Goldman Sachs Emerging Leaders — Runner-Up\n' +
+                '  ★ Goldman Sachs Emerging Leaders (Runner-Up)\n' +
                 '  ★ TreeHacks 2x Winner · Claude Hackathon Winner';
         },
         skills() {
@@ -254,7 +254,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         summer2026() {
             return [
                 '<span class="t-green">Currently · Summer 2026</span>',
-                '  ▸ <span class="t-white">BDP Summer Program</span> — research with Dr. Gillian Hadfield',
+                '  ▸ <span class="t-white">BDP Summer Program</span> · research with Dr. Gillian Hadfield',
                 '  ▸ <span class="t-white">AI Engineering Intern</span> @ Carebrain <span class="t-dim">(Neo portfolio company)</span>'
             ].join('\n');
         },
@@ -275,7 +275,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         pwd() { return '/home/navya/portfolio'; },
         date() { return new Date().toString(); },
         history() { return history.length ? history.map((h, i) => '  ' + (i + 1) + '  ' + esc(h)).join('\n') : '<span class="t-dim">no history yet</span>'; },
-        sudo() { return '<span class="t-accent">Permission denied.</span> nice try — you don\'t have root on Navya\'s ambition. 😏'; },
+        sudo() { return '<span class="t-accent">Permission denied.</span> nice try, you don\'t have root on Navya\'s ambition. 😏'; },
         clear() { output.innerHTML = ''; return null; }
     };
 
@@ -296,7 +296,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             const result = cmds[name](arg);
             if (result !== null && result !== undefined) print(result);
         } else {
-            print('<span class="t-accent">command not found: ' + esc(parts[0]) + '</span> <span class="t-dim">— type `help`</span>');
+            print('<span class="t-accent">command not found: ' + esc(parts[0]) + '</span> <span class="t-dim">· type `help`</span>');
         }
     }
 
@@ -360,7 +360,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     }
 
-    // CLI / GUI toggle — the footer easter egg reveals this terminal
+    // CLI / GUI toggle: the footer easter egg reveals this terminal
     const section = document.getElementById('terminal');
     const toggleBtn = document.getElementById('cliToggle');
     const toggleText = document.getElementById('cliToggleText');
@@ -381,7 +381,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     // ---- boot sequence (typewriter) ----
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const bootLines = [
-        '<span class="t-dim">navya.os · portfolio terminal — booting...</span>',
+        '<span class="t-dim">navya.os · portfolio terminal · booting...</span>',
         '',
         'Hi 👋  Welcome to my interactive portfolio.',
         'Type <span class="t-blue">help</span> to see what you can do, or tap a chip below.'

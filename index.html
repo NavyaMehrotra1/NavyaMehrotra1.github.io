@@ -54,7 +54,7 @@
         </section>
     </div>
 
-    <!-- Interactive Terminal (hidden by default — summoned via the CLI toggle in the footer) -->
+    <!-- Interactive Terminal (hidden by default; revealed via the CLI toggle in the footer) -->
     <section id="terminal" class="terminal-section" style="display:none;">
         <div class="container">
             <p class="terminal-caption">Welcome to CLI mode. <span class="terminal-caption-hint">Type <code>help</code> and hit enter.</span></p>
@@ -63,7 +63,7 @@
                     <span class="t-dot red"></span>
                     <span class="t-dot yellow"></span>
                     <span class="t-dot green"></span>
-                    <span class="terminal-title">navya@portfolio — zsh</span>
+                    <span class="terminal-title">navya@portfolio · zsh</span>
                 </div>
                 <div class="terminal-body" id="terminalBody">
                     <div class="terminal-output" id="terminalOutput"></div>
@@ -249,7 +249,13 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
 
                 <!-- BlueJay -->
                 <div class="project-card" data-category="research">
-                    <div class="project-image">🗳️</div>
+                    <div class="project-image"><div class="cover-tile">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BlueJay type checker">
+                            <path d="M19 7c-4 0-6 2-6 6v3c0 3-1 4-4 5 3 1 4 2 4 5v3c0 4 2 6 6 6" stroke="#007aff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M29 7c4 0 6 2 6 6v3c0 3 1 4 4 5-3 1-4 2-4 5v3c0 4-2 6-6 6" stroke="#007aff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 24l3.5 3.5L30 19" stroke="#34c759" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div></div>
                     <div class="project-content">
                         <h3 class="project-title">Testing BlueJay</h3>
                         <p class="project-description">Working with JHU Programming Languages lab to develop and test a new semantically typed programming language: BlueJay. BlueJay is a novel language with a semantic type checker for bug finding.
@@ -304,7 +310,15 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
 
                 <!-- AI Accountant -->
                 <div class="project-card" data-category="hackathon">
-                    <div class="project-image">🧾</div>
+                    <div class="project-image"><div class="cover-tile">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Accountant">
+                            <rect x="11" y="6" width="22" height="36" rx="3" stroke="#007aff" stroke-width="3"/>
+                            <line x1="16" y1="15" x2="28" y2="15" stroke="#007aff" stroke-width="2.6" stroke-linecap="round"/>
+                            <line x1="16" y1="22" x2="28" y2="22" stroke="#007aff" stroke-width="2.6" stroke-linecap="round"/>
+                            <line x1="16" y1="29" x2="23" y2="29" stroke="#007aff" stroke-width="2.6" stroke-linecap="round"/>
+                            <path d="M36 26l1.5 4.2 4.2 1.5-4.2 1.5L36 37.4l-1.5-4.2-4.2-1.5 4.2-1.5z" fill="#34c759"/>
+                        </svg>
+                    </div></div>
                     <div class="project-content">
                         <h3 class="project-title">AI Accountant</h3>
                         <p class="project-description">Winner of the Claude Hackathon. An end-to-end accounting system powered by AI: automates bookkeeping, categorization, and financial reporting.</p>
@@ -359,7 +373,7 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
 
                 <!-- Goldman Sachs -->
                 <div class="project-card" data-category="professional">
-                    <div class="project-image">📈</div>
+                    <div class="project-image"><div class="cover-tile"><img src="assets/logos/goldman.png" alt="Goldman Sachs logo"></div></div>
                     <div class="project-content">
                         <h3 class="project-title">Goldman Sachs Emerging Leader Series</h3>
                         <p class="project-description">Selected for Goldman Sachs' Emerging Leader Series. Built a mutual funds analysis tool to help surface insights for investment decision-making.</p>
@@ -375,7 +389,7 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
 
                 <!-- Citadel Datathon -->
                 <div class="project-card" data-category="professional">
-                    <div class="project-image">🔍</div>
+                    <div class="project-image"><div class="cover-tile"><img src="assets/logos/citadel.png" alt="Citadel logo"></div></div>
                     <div class="project-content">
                         <h3 class="project-title">Citadel Women's Datathon</h3>
                         <p class="project-description">Data science project analyzing how LLM adoption has affected productivity and labor markets across different industries, using econometric methods to quantify the impact.</p>
@@ -407,7 +421,7 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
                     <div class="honor-logo" data-monogram="JS"><img src="assets/logos/jane-street.png" alt="Jane Street logo" loading="lazy"></div>
                     <div class="honor-firm">Jane Street</div>
                     <div class="honor-program">INSIGHT</div>
-                    <p class="honor-desc">Selected for Jane Street's INSIGHT — an immersive program for exceptional students exploring quantitative trading, research, and technology.</p>
+                    <p class="honor-desc">Selected for Jane Street's INSIGHT, an immersive program for exceptional students exploring quantitative trading, research, and technology.</p>
                     <span class="honor-badge"><span class="dot"></span>Selective</span>
                 </div>
 
@@ -434,7 +448,7 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
                     <div class="honor-logo" data-monogram="C"><img src="assets/logos/citadel.png" alt="Citadel logo" loading="lazy"></div>
                     <div class="honor-firm">Citadel</div>
                     <div class="honor-program">Datathon</div>
-                    <p class="honor-desc">Invited to compete in Citadel's Datathon — an intensive, data-driven problem-solving competition for top students.</p>
+                    <p class="honor-desc">Invited to compete in Citadel's Datathon, an intensive, data-driven problem-solving competition for top students.</p>
                     <span class="honor-badge"><span class="dot"></span>Invitation Only</span>
                 </div>
 
@@ -471,7 +485,7 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
                         <div class="next-tag">Industry</div>
                         <h3 class="next-title">AI Engineering Intern</h3>
                         <p class="next-subtitle">Carebrain &middot; Neo Portfolio Company</p>
-                        <p class="next-desc">Joining Carebrain — a Neo-backed startup — as an AI Engineering Intern, building production AI systems.</p>
+                        <p class="next-desc">Joining Carebrain, a Neo-backed startup, as an AI Engineering Intern, building production AI systems.</p>
                     </div>
                 </div>
             </div>
