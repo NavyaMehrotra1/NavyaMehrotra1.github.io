@@ -16,6 +16,7 @@
                 <ul class="nav-links">
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects & Research</a></li>
+                    <li><a href="#honors">Honors</a></li>
                     <li><a href="#experience">Experience</a></li>
                 </ul>
                 <div class="theme-toggle">
@@ -52,6 +53,38 @@
             </div>
         </section>
     </div>
+
+    <!-- Interactive Terminal (hidden by default — summoned via the CLI toggle in the footer) -->
+    <section id="terminal" class="terminal-section" style="display:none;">
+        <div class="container">
+            <p class="terminal-caption">Welcome to CLI mode. <span class="terminal-caption-hint">Type <code>help</code> and hit enter.</span></p>
+            <div class="terminal-window" id="terminalWindow">
+                <div class="terminal-bar">
+                    <span class="t-dot red"></span>
+                    <span class="t-dot yellow"></span>
+                    <span class="t-dot green"></span>
+                    <span class="terminal-title">navya@portfolio — zsh</span>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-output" id="terminalOutput"></div>
+                    <div class="terminal-input-line" id="terminalInputLine" style="display:none;">
+                        <span class="terminal-prompt">navya@portfolio:~$</span>
+                        <input id="terminalInput" class="terminal-input" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Terminal command input" />
+                    </div>
+                </div>
+                <div class="terminal-hints" id="terminalHints">
+                    <span class="hint-label">try:</span>
+                    <button class="hint-chip" data-cmd="help">help</button>
+                    <button class="hint-chip" data-cmd="whoami">whoami</button>
+                    <button class="hint-chip" data-cmd="ls honors">ls honors</button>
+                    <button class="hint-chip" data-cmd="cat goldman">cat goldman</button>
+                    <button class="hint-chip" data-cmd="awards">awards</button>
+                    <button class="hint-chip" data-cmd="summer2026">summer2026</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <section id="projects" class="section" style="margin-top: 80px;">
         <div class="container">
             <h2 class="section-title">Featured Projects & Research</h2>
@@ -122,14 +155,15 @@ Devising new sampling method to represent diverse perspectives for LLM training 
                 <div class="filter-bar">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="research">Research</button>
-                    <button class="filter-btn" data-filter="hackathon">SWE / Hackathon</button>
-                    <button class="filter-btn" data-filter="company">Company Affiliated</button>
+                    <button class="filter-btn" data-filter="professional">Professional</button>
+                    <button class="filter-btn" data-filter="hackathon">Hackathon</button>
+                    <button class="filter-btn" data-filter="personal">Personal</button>
                 </div>
             </div>
 
             <div class="projects-grid" id="allProjectsGrid">
                 <!-- CSSL Research -->
-                <div class="project-card">
+                <div class="project-card" data-category="research">
                     <div class="project-image"><img src="assets/pdi.png"></div>
                     <div class="project-content">
                         <h3 class="project-title">NLP Research: Computational Social Sciences Lab</h3>
@@ -235,13 +269,13 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
                 </div>
 
                 <!-- HackOverflow -->
-                <div class="project-card">
+                <div class="project-card" data-category="hackathon">
                     <div class="project-image"><img src = "assets/hackoverflow.png"></div>
                     <div class="project-content">
                         <h3 class="project-title">HackOverflow (Stanford TreeHacks 2x Winner)</h3>
                         <p class="project-description">Winning project at TreeHacks (Stanford's hackathon). Built a full-stack application under 36 hours. Stack overflow like platform for AI agents to ask each other questions and improve efficiency. Won Best Use of Multi Agent Systems by Fetch.ai ($1500) and Best Use of Runpod Flash ($3090).</p>
                         <div class="project-tech">
-                            <span class="tech-tag">SWE / Hackathon</span>
+                            <span class="tech-tag">Hackathon</span>
                             <span class="tech-tag">TreeHacks Winner</span>
                         </div>
                         <div class="project-links">
@@ -306,13 +340,13 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
                 </div>
 
                 <!-- Data Science Club Website -->
-                <div class="project-card" data-category="hackathon">
+                <div class="project-card" data-category="personal">
                     <div class="project-image"><img src="assets/data_science_club_website.png"></div>
                     <div class="project-content">
                         <h3 class="project-title">Data Science Club Website</h3>
                         <p class="project-description">Launched the Data Science Club at JHU as Club President and built a website for it. Our mission is to give students the skills and opportunity to work on impactful data projects.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">SWE / Hackathon</span>
+                            <span class="tech-tag">Personal</span>
                             <span class="tech-tag">HTML/CSS/JS</span>
                             <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">MongoDB</span>
@@ -324,13 +358,13 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
                 </div>
 
                 <!-- Goldman Sachs -->
-                <div class="project-card" data-category="company">
+                <div class="project-card" data-category="professional">
                     <div class="project-image">📈</div>
                     <div class="project-content">
                         <h3 class="project-title">Goldman Sachs Emerging Leader Series</h3>
                         <p class="project-description">Selected for Goldman Sachs' Emerging Leader Series. Built a mutual funds analysis tool to help surface insights for investment decision-making.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Company Affiliated</span>
+                            <span class="tech-tag">Professional</span>
                             <span class="tech-tag">Finance</span>
                             <span class="tech-tag">Data Analysis</span>
                             <span class="tech-tag">Python</span>
@@ -340,13 +374,13 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
                 </div>
 
                 <!-- Citadel Datathon -->
-                <div class="project-card" data-category="company">
+                <div class="project-card" data-category="professional">
                     <div class="project-image">🔍</div>
                     <div class="project-content">
                         <h3 class="project-title">Citadel Women's Datathon</h3>
                         <p class="project-description">Data science project analyzing how LLM adoption has affected productivity and labor markets across different industries, using econometric methods to quantify the impact.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Company Affiliated</span>
+                            <span class="tech-tag">Professional</span>
                             <span class="tech-tag">Data Science</span>
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Econometrics</span>
@@ -361,8 +395,91 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
         </div>
     </section>
 
-    <br> 
-    <br> 
+    <!-- Selective Programs & Honors -->
+    <section id="honors" class="section honors-section" style="margin-top: 80px;">
+        <div class="container">
+            <h2 class="section-title reveal">Selective Programs &amp; Honors</h2>
+            <p class="section-subtitle reveal">Highly selective, invitation-only programs at firms building the future of finance and AI.</p>
+
+            <div class="honors-grid">
+                <!-- Jane Street -->
+                <div class="honor-card reveal">
+                    <div class="honor-logo" data-monogram="JS"><img src="assets/logos/jane-street.png" alt="Jane Street logo" loading="lazy"></div>
+                    <div class="honor-firm">Jane Street</div>
+                    <div class="honor-program">INSIGHT</div>
+                    <p class="honor-desc">Selected for Jane Street's INSIGHT — an immersive program for exceptional students exploring quantitative trading, research, and technology.</p>
+                    <span class="honor-badge"><span class="dot"></span>Selective</span>
+                </div>
+
+                <!-- Goldman Sachs -->
+                <div class="honor-card reveal">
+                    <div class="honor-logo" data-monogram="GS"><img src="assets/logos/goldman.png" alt="Goldman Sachs logo" loading="lazy"></div>
+                    <div class="honor-firm">Goldman Sachs</div>
+                    <div class="honor-program">Emerging Leaders Summit</div>
+                    <p class="honor-desc">Recognized as Runner-Up among a competitive cohort of emerging leaders selected from across the country.</p>
+                    <span class="honor-badge accent"><span class="dot"></span>Runner-Up</span>
+                </div>
+
+                <!-- Bridgewater -->
+                <div class="honor-card reveal">
+                    <div class="honor-logo" data-monogram="BW"><img src="assets/logos/bridgewater.png" alt="Bridgewater Associates logo" loading="lazy"></div>
+                    <div class="honor-firm">Bridgewater Associates</div>
+                    <div class="honor-program">AI Immersion Hackathon</div>
+                    <p class="honor-desc">Invited to Bridgewater's AI Immersion Hackathon, building applied AI alongside the world's largest hedge fund.</p>
+                    <span class="honor-badge"><span class="dot"></span>Invitation Only</span>
+                </div>
+
+                <!-- Citadel -->
+                <div class="honor-card reveal">
+                    <div class="honor-logo" data-monogram="C"><img src="assets/logos/citadel.png" alt="Citadel logo" loading="lazy"></div>
+                    <div class="honor-firm">Citadel</div>
+                    <div class="honor-program">Datathon</div>
+                    <p class="honor-desc">Invited to compete in Citadel's Datathon — an intensive, data-driven problem-solving competition for top students.</p>
+                    <span class="honor-badge"><span class="dot"></span>Invitation Only</span>
+                </div>
+
+                <!-- Accenture -->
+                <div class="honor-card reveal">
+                    <div class="honor-logo" data-monogram="A"><img src="assets/logos/accenture.png" alt="Accenture logo" loading="lazy"></div>
+                    <div class="honor-firm">Accenture</div>
+                    <div class="honor-program">Student Leadership Program</div>
+                    <p class="honor-desc">Invited to Accenture's Student Leadership Program, a development experience for emerging leaders in technology and consulting.</p>
+                    <span class="honor-badge"><span class="dot"></span>Invitation Only</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summer 2026 · What's Next -->
+    <section class="section next-section" style="margin-top: 60px;">
+        <div class="container">
+            <div class="next-label reveal"><span class="pulse"></span>Currently &middot; Summer 2026</div>
+            <div class="next-grid">
+                <!-- BDP Summer Program -->
+                <div class="next-card reveal">
+                    <div class="next-card-inner">
+                        <div class="next-tag">Research</div>
+                        <h3 class="next-title">BDP Summer Program</h3>
+                        <p class="next-subtitle">Research with Dr. Gillian Hadfield</p>
+                        <p class="next-desc">Selected for the Bloomberg Distinguished Professor Summer Program, conducting research under Dr. Gillian Hadfield on AI governance and alignment.</p>
+                    </div>
+                </div>
+
+                <!-- Carebrain -->
+                <div class="next-card reveal">
+                    <div class="next-card-inner">
+                        <div class="next-tag">Industry</div>
+                        <h3 class="next-title">AI Engineering Intern</h3>
+                        <p class="next-subtitle">Carebrain &middot; Neo Portfolio Company</p>
+                        <p class="next-desc">Joining Carebrain — a Neo-backed startup — as an AI Engineering Intern, building production AI systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
     <br>
     <div id = "experience" class="experience-section">
         <div class="container">
@@ -478,9 +595,16 @@ Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks. Under 
             </div>
         </div>
     </div>
-    <br> 
-    <br> 
-    <br> 
+    <br>
+    <br>
+    <br>
+
+    <footer class="site-footer">
+        <button class="cli-toggle" id="cliToggle" aria-expanded="false" aria-controls="terminal" title="For the technically curious">
+            <span class="cli-caret">$</span> <span id="cliToggleText">prefer a terminal?</span><span class="cli-blink">▋</span>
+        </button>
+        <p class="footer-copy">© 2026 Navya Mehrotra</p>
+    </footer>
 
 </body>
 </html>

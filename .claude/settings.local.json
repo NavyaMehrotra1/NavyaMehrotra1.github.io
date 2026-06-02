@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(browse)",
+      "Bash(node --check scripts/main.js)",
+      "Bash(awk '{o+=gsub\\(/{/,\"{\"\\); c+=gsub\\(/}/,\"}\"\\)} END{print \"open=\"o\" close=\"c}' styles/main.css)"
+    ]
+  }
+}
